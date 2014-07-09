@@ -13,5 +13,6 @@ dist
 /.project
 /RUNNING_PID
 /.settings
-activator*
+/.activator
+/.activator-launch-1.2.3.jar
 
