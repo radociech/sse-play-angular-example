@@ -1,0 +1,11 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET         /                     controllers.ServerMessageController.index()
+GET         /feed/:channel        controllers.ServerMessageController.feed(channel: String)
+POST       /send                  controllers.ServerMessageController.send()
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file          controllers.Assets.at(path="/public", file)

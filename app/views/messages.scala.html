@@ -1,0 +1,27 @@
+@(title: String)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.min.js"></script>
+        <script src="@routes.Assets.at("javascripts/app.js")"></script>
+        <script src="@routes.Assets.at("javascripts/controllers.js")"></script>
+        
+    </head>
+    <body ng-app="serverMessage">
+        
+        <p>@title</p>
+        <div ng-controller="ServerMessageCtrl">
+         <input type="text" ng-model="serverMessage" >
+         <button ng-click="send(serverMessage)">send message</button>
+        <div ng-repeat="msg in messages"
+             <strong>{{msg.message}}</strong>
+             <br/>
+         </div>
+            
+    </body>
+</html>
